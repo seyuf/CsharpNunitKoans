@@ -114,7 +114,7 @@ namespace TheKoans
 			var stack = new Stack (array);
 			stack.Push ("last");
 			//bug?!
-			CollectionAssert.AreEqual ((ICollection)stack, stack.ToArray (), "Converting this stack back into an Array may surprise you.");
+			CollectionAssert.AreEqual (stack, stack.ToArray (), "Converting this stack back into an Array may surprise you.");
 			var poppedValue = stack.Pop ();
 			Assert.AreEqual ("last", poppedValue, "Popped values come from the top.  I suppose if they came from the bottom it would be called... Plop?");
 			CollectionAssert.AreEqual ((ICollection)stack, stack.ToArray (), "I'm not sure why this one is here.. I guess there wasn't enough material to create an AboutStacks...");
