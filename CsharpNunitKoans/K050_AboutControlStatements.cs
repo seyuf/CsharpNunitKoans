@@ -17,7 +17,7 @@ namespace TheKoans
 				b = false;
 			}
 
-			Assert.AreEqual (FILL_ME_IN, b, "To b or not to b -- that really is the answer...");
+			Assert.AreEqual (true, b, "To b or not to b -- that really is the answer...");
 		}
 
 		[Test]
