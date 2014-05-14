@@ -107,6 +107,7 @@ namespace TheKoans
 		[Test]
 		public void CallingPublicMethodsOnAnInstance ()
 		{
+			
 			InnerSecret secret = new InnerSecret ();
 			Assert.AreEqual ("secret", secret.Secret ());
 		}
