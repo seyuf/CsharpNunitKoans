@@ -237,7 +237,7 @@ namespace TheKoans
 				whoCaughtTheException = "When we tried to move to the next item in the list";
 			}
 
-			Assert.AreEqual (FILL_ME_IN, whoCaughtTheException, "If you can solve this whodunit mystery, your Karma will thank you.");
+			Assert.AreEqual ("When we tried to move to the next item in the list", whoCaughtTheException, "If you can solve this whodunit mystery, your Karma will thank you.");
 		}
 	}
 }
