@@ -109,7 +109,7 @@ namespace TheKoans
 		{
 			
 			InnerSecret secret = new InnerSecret ();
-			Assert.AreEqual ("secret", secret.Secret ());
+			Assert.AreEqual ("Secret", secret.Secret ());
 		}
 		//Protected methods can only be called by a subclass
 		//We're going to call the public method called
@@ -119,7 +119,7 @@ namespace TheKoans
 		public void CallingProtectedMethodsOnAnInstance ()
 		{
 			StateSecret secret = new StateSecret ();
-			Assert.Equals (FILL_ME_IN, secret.InformationLeak ());
+			Assert.AreEqual("This is secret", secret.InformationLeak ());
 		}
 		//But, we can't call the private methods of InnerSecret
 		//either through an instance, or through a subclass. It
@@ -134,7 +134,7 @@ namespace TheKoans
 			string superSecretMessage = secret.GetType ()
                 .GetMethod ("SooperSeekrit", System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance)
                 .Invoke (secret, null) as string;
-			Assert.Equals (FILL_ME_IN, superSecretMessage);
+			Assert.AreEqual ("No one will find me!", superSecretMessage);
 		}
 		//Up till now we've had explicit return types. It's also
 		//possible to create methods which dynamically shift
@@ -148,9 +148,9 @@ namespace TheKoans
 		[Test]
 		public void CallingGenericMethods ()
 		{
-			Assert.Equals (typeof(FILL_ME_IN), GiveMeBack<int> (1).GetType ());
+			Assert.AreEqual (typeof(int), GiveMeBack<int> (1).GetType ());
 
-			Assert.Equals (FILL_ME_IN, GiveMeBack<string> ("Hi!"));
+			Assert.AreEqual ("Hi!", GiveMeBack<string> ("Hi!"));
 		}
 	}
 }
